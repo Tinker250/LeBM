@@ -2,7 +2,8 @@
 
 ## Paper information
 Rongjunchen Zhang, Tingming Wu, Sheng Wen, Surya Nepal, Cecile Paris
-_[Left Brain Matching: A Logical Support Network for Multi-Turn Response Selection](https:).
+
+[Left Brain Matching: A Logical Support Network for Multi-Turn Response Selection](https:).
 
 ## Abstract
 
