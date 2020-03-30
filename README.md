@@ -1,7 +1,7 @@
 # LeBM
 
 ## Paper information
-Rongjunchen Zhang, Tingming Wu, Sheng Wen, Surya Nepal, Cecile Paris
+Rongjunchen Zhang, Tingming Wu, Sheng Wen, Surya Nepal, Cecile Paris, Yang Xiang
 
 [Left Brain Matching: A Logical Support Network for Multi-Turn Response Selection](https:).
 
