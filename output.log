@@ -1,0 +1,149 @@
+WARNING:tensorflow:From /home/junchen/workspace/bert-master/optimization.py:87: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From run_udc.py:1031: The name tf.app.run is deprecated. Please use tf.compat.v1.app.run instead.
+
+WARNING:tensorflow:From run_udc.py:833: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+W0924 17:16:00.417243 140629054895936 deprecation_wrapper.py:119] From run_udc.py:833: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From run_udc.py:833: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+W0924 17:16:00.417332 140629054895936 deprecation_wrapper.py:119] From run_udc.py:833: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+WARNING:tensorflow:From /home/junchen/workspace/bert-master/modeling.py:93: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+W0924 17:16:00.417543 140629054895936 deprecation_wrapper.py:119] From /home/junchen/workspace/bert-master/modeling.py:93: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+WARNING:tensorflow:From run_udc.py:858: The name tf.gfile.MakeDirs is deprecated. Please use tf.io.gfile.makedirs instead.
+
+W0924 17:16:00.417890 140629054895936 deprecation_wrapper.py:119] From run_udc.py:858: The name tf.gfile.MakeDirs is deprecated. Please use tf.io.gfile.makedirs instead.
+
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+W0924 17:16:01.158698 140629054895936 lazy_loader.py:50] 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From run_udc.py:199: The name tf.gfile.Open is deprecated. Please use tf.io.gfile.GFile instead.
+
+W0924 17:16:01.159058 140629054895936 deprecation_wrapper.py:119] From run_udc.py:199: The name tf.gfile.Open is deprecated. Please use tf.io.gfile.GFile instead.
+
+UDC dataset is too big, loading data spent a long time, please wait patiently..................
+WARNING:tensorflow:Estimator's model_fn (<function model_fn_builder.<locals>.model_fn at 0x7fe665858d08>) includes params argument, but params are not passed to Estimator.
+W0924 17:16:02.247403 140629054895936 estimator.py:1984] Estimator's model_fn (<function model_fn_builder.<locals>.model_fn at 0x7fe665858d08>) includes params argument, but params are not passed to Estimator.
+INFO:tensorflow:Using config: {'_model_dir': './data/output', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': 1000, '_save_checkpoints_secs': None, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    meta_optimizer_iterations: ONE
+  }
+}
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': None, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fe6510b03c8>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1, '_tpu_config': TPUConfig(iterations_per_loop=1000, num_shards=8, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None, eval_training_input_configuration=2), '_cluster': None}
+I0924 17:16:02.248027 140629054895936 estimator.py:209] Using config: {'_model_dir': './data/output', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': 1000, '_save_checkpoints_secs': None, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    meta_optimizer_iterations: ONE
+  }
+}
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': None, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fe6510b03c8>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1, '_tpu_config': TPUConfig(iterations_per_loop=1000, num_shards=8, num_cores_per_replica=None, per_host_input_for_training=3, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None, eval_training_input_configuration=2), '_cluster': None}
+INFO:tensorflow:_TPUContext: eval_on_tpu True
+I0924 17:16:02.248197 140629054895936 tpu_context.py:209] _TPUContext: eval_on_tpu True
+WARNING:tensorflow:eval_on_tpu ignored because use_tpu is False.
+W0924 17:16:02.248320 140629054895936 tpu_context.py:211] eval_on_tpu ignored because use_tpu is False.
+WARNING:tensorflow:From run_udc.py:531: The name tf.python_io.TFRecordWriter is deprecated. Please use tf.io.TFRecordWriter instead.
+
+W0924 17:16:02.248416 140629054895936 deprecation_wrapper.py:119] From run_udc.py:531: The name tf.python_io.TFRecordWriter is deprecated. Please use tf.io.TFRecordWriter instead.
+
+WARNING:tensorflow:From run_udc.py:535: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+W0924 17:16:02.254122 140629054895936 deprecation_wrapper.py:119] From run_udc.py:535: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+INFO:tensorflow:Writing example 0 of 100000
+I0924 17:16:02.254213 140629054895936 run_udc.py:535] Writing example 0 of 100000
+INFO:tensorflow:*** Example ***
+I0924 17:16:02.256121 140629054895936 run_udc.py:509] *** Example ***
+INFO:tensorflow:guid: train-0
+I0924 17:16:02.256169 140629054895936 run_udc.py:510] guid: train-0
+INFO:tensorflow:tokens: [CLS] he ##y . . i installed a pat ##a card in my com ##p with _ _ number _ _ h ##d s on it d ##mes ##g says the card is there ( it seems to be using the lib ##ata module ) but the drives on the card are not showing up . . has someone experience with these kinds of cards may ##be the d ##mes ##g has some c ##lue can you post it to past ##eb ##in ? ? that ##s a bit hard because its a different com ##p with no [SEP] that is already loaded . . part of ide _ core in ls ##mo ##d but no _ _ path _ _ for the disk ##s : ( [SEP]
+I0924 17:16:02.256229 140629054895936 run_udc.py:512] tokens: [CLS] he ##y . . i installed a pat ##a card in my com ##p with _ _ number _ _ h ##d s on it d ##mes ##g says the card is there ( it seems to be using the lib ##ata module ) but the drives on the card are not showing up . . has someone experience with these kinds of cards may ##be the d ##mes ##g has some c ##lue can you post it to past ##eb ##in ? ? that ##s a bit hard because its a different com ##p with no [SEP] that is already loaded . . part of ide _ core in ls ##mo ##d but no _ _ path _ _ for the disk ##s : ( [SEP]
+INFO:tensorflow:input_ids: 101 10261 10157 119 119 177 34398 169 20194 10113 23050 10106 15127 10212 10410 10169 168 168 11487 168 168 176 10162 187 10135 10271 172 13546 10240 22153 10105 23050 10124 11155 113 10271 34208 10114 10347 13382 10105 98453 11952 58967 114 10473 10105 64592 10135 10105 23050 10301 10472 37501 10741 119 119 10393 30455 20627 10169 11762 85179 10108 40209 11387 11044 10105 172 13546 10240 10393 11152 171 75483 10944 13028 11841 10271 10114 17781 21057 10245 136 136 10189 10107 169 17684 19118 12373 10474 169 12902 10212 10410 10169 10192 102 10189 10124 19034 103927 119 119 10668 10108 38938 168 27362 10106 103158 11033 10162 10473 10192 168 168 37013 168 168 10142 10105 50169 10107 131 113 102
+I0924 17:16:02.256283 140629054895936 run_udc.py:513] input_ids: 101 10261 10157 119 119 177 34398 169 20194 10113 23050 10106 15127 10212 10410 10169 168 168 11487 168 168 176 10162 187 10135 10271 172 13546 10240 22153 10105 23050 10124 11155 113 10271 34208 10114 10347 13382 10105 98453 11952 58967 114 10473 10105 64592 10135 10105 23050 10301 10472 37501 10741 119 119 10393 30455 20627 10169 11762 85179 10108 40209 11387 11044 10105 172 13546 10240 10393 11152 171 75483 10944 13028 11841 10271 10114 17781 21057 10245 136 136 10189 10107 169 17684 19118 12373 10474 169 12902 10212 10410 10169 10192 102 10189 10124 19034 103927 119 119 10668 10108 38938 168 27362 10106 103158 11033 10162 10473 10192 168 168 37013 168 168 10142 10105 50169 10107 131 113 102
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+I0924 17:16:02.256338 140629054895936 run_udc.py:514] input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+I0924 17:16:02.256386 140629054895936 run_udc.py:515] segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:label: 1 (id = 1)
+I0924 17:16:02.256417 140629054895936 run_udc.py:516] label: 1 (id = 1)
+INFO:tensorflow:*** Example ***
+I0924 17:16:02.258398 140629054895936 run_udc.py:509] *** Example ***
+INFO:tensorflow:guid: train-1
+I0924 17:16:02.258458 140629054895936 run_udc.py:510] guid: train-1
+INFO:tensorflow:tokens: [CLS] he ##y . . i installed a pat ##a card in my com ##p with _ _ number _ _ h ##d s on it d ##mes ##g says the card is there ( it seems to be using the lib ##ata module ) but the drives on the card are not showing up . . has someone experience with these kinds of cards may ##be the d ##mes ##g has some c ##lue can you post it to past ##eb ##in ? ? that ##s a bit hard because its a different com ##p with no net but the line that caught my eye was ata ##2 [SEP] or an option or something it s pretty obvious to what it does check out ima ##p [SEP]
+I0924 17:16:02.258518 140629054895936 run_udc.py:512] tokens: [CLS] he ##y . . i installed a pat ##a card in my com ##p with _ _ number _ _ h ##d s on it d ##mes ##g says the card is there ( it seems to be using the lib ##ata module ) but the drives on the card are not showing up . . has someone experience with these kinds of cards may ##be the d ##mes ##g has some c ##lue can you post it to past ##eb ##in ? ? that ##s a bit hard because its a different com ##p with no net but the line that caught my eye was ata ##2 [SEP] or an option or something it s pretty obvious to what it does check out ima ##p [SEP]
+INFO:tensorflow:input_ids: 101 10261 10157 119 119 177 34398 169 20194 10113 23050 10106 15127 10212 10410 10169 168 168 11487 168 168 176 10162 187 10135 10271 172 13546 10240 22153 10105 23050 10124 11155 113 10271 34208 10114 10347 13382 10105 98453 11952 58967 114 10473 10105 64592 10135 10105 23050 10301 10472 37501 10741 119 119 10393 30455 20627 10169 11762 85179 10108 40209 11387 11044 10105 172 13546 10240 10393 11152 171 75483 10944 13028 11841 10271 10114 17781 21057 10245 136 136 10189 10107 169 17684 19118 12373 10474 169 12902 10212 10410 10169 10192 11988 10473 10105 12117 10189 39797 15127 32684 10134 21695 10729 102 10345 10151 32562 10345 26133 10271 187 108361 94452 10114 12976 10271 15107 43662 10950 13872 10410 102
+I0924 17:16:02.258572 140629054895936 run_udc.py:513] input_ids: 101 10261 10157 119 119 177 34398 169 20194 10113 23050 10106 15127 10212 10410 10169 168 168 11487 168 168 176 10162 187 10135 10271 172 13546 10240 22153 10105 23050 10124 11155 113 10271 34208 10114 10347 13382 10105 98453 11952 58967 114 10473 10105 64592 10135 10105 23050 10301 10472 37501 10741 119 119 10393 30455 20627 10169 11762 85179 10108 40209 11387 11044 10105 172 13546 10240 10393 11152 171 75483 10944 13028 11841 10271 10114 17781 21057 10245 136 136 10189 10107 169 17684 19118 12373 10474 169 12902 10212 10410 10169 10192 11988 10473 10105 12117 10189 39797 15127 32684 10134 21695 10729 102 10345 10151 32562 10345 26133 10271 187 108361 94452 10114 12976 10271 15107 43662 10950 13872 10410 102
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+I0924 17:16:02.258626 140629054895936 run_udc.py:514] input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+I0924 17:16:02.258673 140629054895936 run_udc.py:515] segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:label: 0 (id = 0)
+I0924 17:16:02.258704 140629054895936 run_udc.py:516] label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+I0924 17:16:02.261176 140629054895936 run_udc.py:509] *** Example ***
+INFO:tensorflow:guid: train-2
+I0924 17:16:02.261233 140629054895936 run_udc.py:510] guid: train-2
+INFO:tensorflow:tokens: [CLS] i assume you mean _ _ path _ _ is there a con ##figur ##e script in that director ##y no ##pe is there a read ##me or instal ##l ye ##a it only tells me this program has no war ##rant ##y when you ls is there anything that shows up as green lib ##f ##mo ##de ##x so numbers here and ya ##mi ##pod run _ _ [SEP] after you do that run ya ##mi ##pod i do n ' t understand why drag and drop does n ' t work in rhythm ##box i ve tried g ##t ##k pod and it would n ' t even det ##ect my i ##pod telling me i had some _ _ path _ _ error [SEP]
+I0924 17:16:02.261293 140629054895936 run_udc.py:512] tokens: [CLS] i assume you mean _ _ path _ _ is there a con ##figur ##e script in that director ##y no ##pe is there a read ##me or instal ##l ye ##a it only tells me this program has no war ##rant ##y when you ls is there anything that shows up as green lib ##f ##mo ##de ##x so numbers here and ya ##mi ##pod run _ _ [SEP] after you do that run ya ##mi ##pod i do n ' t understand why drag and drop does n ' t work in rhythm ##box i ve tried g ##t ##k pod and it would n ' t even det ##ect my i ##pod telling me i had some _ _ path _ _ error [SEP]
+INFO:tensorflow:input_ids: 101 177 46197 13028 36110 168 168 37013 168 168 10124 11155 169 10173 73657 10112 31810 10106 10189 12461 10157 10192 11355 10124 11155 169 24944 10627 10345 50562 10161 11023 10113 10271 10893 27024 10911 10531 12483 10393 10192 10338 18348 10157 10841 13028 103158 10124 11155 42819 10189 15573 10741 10146 23320 98453 10575 11033 10253 10686 10380 20953 19353 10111 10549 10500 68748 14095 168 168 102 10662 13028 10149 10189 14095 10549 10500 68748 177 10149 182 112 188 49151 31237 71840 10111 36365 15107 182 112 188 11424 10106 51720 34078 177 10323 27156 175 10123 10174 11202 10111 10271 10894 182 112 188 13246 10349 56906 15127 177 68748 61758 10911 177 10374 11152 168 168 37013 168 168 34046 102
+I0924 17:16:02.261346 140629054895936 run_udc.py:513] input_ids: 101 177 46197 13028 36110 168 168 37013 168 168 10124 11155 169 10173 73657 10112 31810 10106 10189 12461 10157 10192 11355 10124 11155 169 24944 10627 10345 50562 10161 11023 10113 10271 10893 27024 10911 10531 12483 10393 10192 10338 18348 10157 10841 13028 103158 10124 11155 42819 10189 15573 10741 10146 23320 98453 10575 11033 10253 10686 10380 20953 19353 10111 10549 10500 68748 14095 168 168 102 10662 13028 10149 10189 14095 10549 10500 68748 177 10149 182 112 188 49151 31237 71840 10111 36365 15107 182 112 188 11424 10106 51720 34078 177 10323 27156 175 10123 10174 11202 10111 10271 10894 182 112 188 13246 10349 56906 15127 177 68748 61758 10911 177 10374 11152 168 168 37013 168 168 34046 102
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+I0924 17:16:02.261398 140629054895936 run_udc.py:514] input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+I0924 17:16:02.261444 140629054895936 run_udc.py:515] segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:label: 1 (id = 1)
+I0924 17:16:02.261475 140629054895936 run_udc.py:516] label: 1 (id = 1)
+INFO:tensorflow:*** Example ***
+I0924 17:16:02.263874 140629054895936 run_udc.py:509] *** Example ***
+INFO:tensorflow:guid: train-3
+I0924 17:16:02.263927 140629054895936 run_udc.py:510] guid: train-3
+INFO:tensorflow:tokens: [CLS] i assume you mean _ _ path _ _ is there a con ##figur ##e script in that director ##y no ##pe is there a read ##me or instal ##l ye ##a it only tells me this program has no war ##rant ##y when you ls is there anything that shows up as green lib ##f ##mo ##de ##x so numbers here and ya ##mi ##pod run _ _ path _ _ up ##dati ##ng play ##cou ##nts . [SEP] if you are of a mind to use the package manager why not just use syna ##ptic unless you have only c ##li i was talking to arm ##os ##fig ##hter for the exact line to instal ##l developer essential ##s with ap ##t - get [SEP]
+I0924 17:16:02.263986 140629054895936 run_udc.py:512] tokens: [CLS] i assume you mean _ _ path _ _ is there a con ##figur ##e script in that director ##y no ##pe is there a read ##me or instal ##l ye ##a it only tells me this program has no war ##rant ##y when you ls is there anything that shows up as green lib ##f ##mo ##de ##x so numbers here and ya ##mi ##pod run _ _ path _ _ up ##dati ##ng play ##cou ##nts . [SEP] if you are of a mind to use the package manager why not just use syna ##ptic unless you have only c ##li i was talking to arm ##os ##fig ##hter for the exact line to instal ##l developer essential ##s with ap ##t - get [SEP]
+INFO:tensorflow:input_ids: 101 177 46197 13028 36110 168 168 37013 168 168 10124 11155 169 10173 73657 10112 31810 10106 10189 12461 10157 10192 11355 10124 11155 169 24944 10627 10345 50562 10161 11023 10113 10271 10893 27024 10911 10531 12483 10393 10192 10338 18348 10157 10841 13028 103158 10124 11155 42819 10189 15573 10741 10146 23320 98453 10575 11033 10253 10686 10380 20953 19353 10111 10549 10500 68748 14095 168 168 37013 168 168 10741 62268 10376 12253 30656 14073 119 102 12277 13028 10301 10108 169 21133 10114 11760 10105 62432 16935 31237 10472 12820 11760 36052 82842 60015 13028 10529 10893 171 10390 177 10134 78254 10114 31251 10310 74115 70445 10142 10105 45809 12117 10114 50562 10161 80614 50399 10107 10169 26219 10123 118 15329 102
+I0924 17:16:02.264044 140629054895936 run_udc.py:513] input_ids: 101 177 46197 13028 36110 168 168 37013 168 168 10124 11155 169 10173 73657 10112 31810 10106 10189 12461 10157 10192 11355 10124 11155 169 24944 10627 10345 50562 10161 11023 10113 10271 10893 27024 10911 10531 12483 10393 10192 10338 18348 10157 10841 13028 103158 10124 11155 42819 10189 15573 10741 10146 23320 98453 10575 11033 10253 10686 10380 20953 19353 10111 10549 10500 68748 14095 168 168 37013 168 168 10741 62268 10376 12253 30656 14073 119 102 12277 13028 10301 10108 169 21133 10114 11760 10105 62432 16935 31237 10472 12820 11760 36052 82842 60015 13028 10529 10893 171 10390 177 10134 78254 10114 31251 10310 74115 70445 10142 10105 45809 12117 10114 50562 10161 80614 50399 10107 10169 26219 10123 118 15329 102
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+I0924 17:16:02.264093 140629054895936 run_udc.py:514] input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+I0924 17:16:02.264140 140629054895936 run_udc.py:515] segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:label: 0 (id = 0)
+I0924 17:16:02.264171 140629054895936 run_udc.py:516] label: 0 (id = 0)
+INFO:tensorflow:*** Example ***
+I0924 17:16:02.265664 140629054895936 run_udc.py:509] *** Example ***
+INFO:tensorflow:guid: train-4
+I0924 17:16:02.265718 140629054895936 run_udc.py:510] guid: train-4
+INFO:tensorflow:tokens: [CLS] can anyone help me . . i ve tried everything that i could think of . . does anyone have c ##s s working on li ##nu ##x with sound steam working good etc are you using wine ye ##s c ##s works fine but no sound . . which sound driver are you using in wine ##c ##f ##g oss my problem is ( i think ) is that i dont have the als ##as oss em ##ulator working correct ##ly i had a lot of trouble with sound in wine my ##self i think i [SEP] i ve never used the als ##a oss em ##ulator sor ##ry did you ever run any game under wine or what em ##ulator are you using now [SEP]
+I0924 17:16:02.265777 140629054895936 run_udc.py:512] tokens: [CLS] can anyone help me . . i ve tried everything that i could think of . . does anyone have c ##s s working on li ##nu ##x with sound steam working good etc are you using wine ye ##s c ##s works fine but no sound . . which sound driver are you using in wine ##c ##f ##g oss my problem is ( i think ) is that i dont have the als ##as oss em ##ulator working correct ##ly i had a lot of trouble with sound in wine my ##self i think i [SEP] i ve never used the als ##a oss em ##ulator sor ##ry did you ever run any game under wine or what em ##ulator are you using now [SEP]
+INFO:tensorflow:input_ids: 101 10944 51747 15217 10911 119 119 177 10323 27156 42536 10189 177 12174 27874 10108 119 119 15107 51747 10529 171 10107 187 14616 10135 11614 11147 10686 10169 19302 45833 14616 15198 12375 10301 13028 13382 43558 11023 10107 171 10107 14009 13435 10473 10192 19302 119 119 10319 19302 25926 10301 13028 13382 10106 43558 10350 10575 10240 92209 15127 18077 10124 113 177 27874 114 10124 10189 177 11758 10529 10105 10223 10403 92209 10266 82444 14616 49148 10454 177 10374 169 19826 10108 58285 10169 19302 10106 43558 15127 43310 177 27874 177 102 177 10323 14794 11031 10105 10223 10113 92209 10266 82444 56011 10908 12172 13028 17038 14095 11178 11661 10571 43558 10345 12976 10266 82444 10301 13028 13382 11858 102
+I0924 17:16:02.265834 140629054895936 run_udc.py:513] input_ids: 101 10944 51747 15217 10911 119 119 177 10323 27156 42536 10189 177 12174 27874 10108 119 119 15107 51747 10529 171 10107 187 14616 10135 11614 11147 10686 10169 19302 45833 14616 15198 12375 10301 13028 13382 43558 11023 10107 171 10107 14009 13435 10473 10192 19302 119 119 10319 19302 25926 10301 13028 13382 10106 43558 10350 10575 10240 92209 15127 18077 10124 113 177 27874 114 10124 10189 177 11758 10529 10105 10223 10403 92209 10266 82444 14616 49148 10454 177 10374 169 19826 10108 58285 10169 19302 10106 43558 15127 43310 177 27874 177 102 177 10323 14794 11031 10105 10223 10113 92209 10266 82444 56011 10908 12172 13028 17038 14095 11178 11661 10571 43558 10345 12976 10266 82444 10301 13028 13382 11858 102
+INFO:tensorflow:input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+I0924 17:16:02.265882 140629054895936 run_udc.py:514] input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+I0924 17:16:02.265929 140629054895936 run_udc.py:515] segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+INFO:tensorflow:label: 1 (id = 1)
+I0924 17:16:02.265960 140629054895936 run_udc.py:516] label: 1 (id = 1)
+INFO:tensorflow:Writing example 10000 of 100000
+I0924 17:16:15.269370 140629054895936 run_udc.py:535] Writing example 10000 of 100000
+INFO:tensorflow:Writing example 20000 of 100000
+I0924 17:16:28.113010 140629054895936 run_udc.py:535] Writing example 20000 of 100000
+INFO:tensorflow:Writing example 30000 of 100000
+I0924 17:16:41.152645 140629054895936 run_udc.py:535] Writing example 30000 of 100000
+INFO:tensorflow:Writing example 40000 of 100000
+I0924 17:16:54.044195 140629054895936 run_udc.py:535] Writing example 40000 of 100000
