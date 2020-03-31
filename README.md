@@ -12,6 +12,8 @@ Response selection is a major functionality in a fully automated chatbot, which 
 ## Citation
 
 ## Download the data
+Running the commands to train or chat with the models will automatically download the data for you.
+Alternatively, you can manually download the data by running `python download_data.py`. This will download the following files to `data/UDC/`
 
 ## Train a model
 
