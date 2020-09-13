@@ -15,6 +15,7 @@ Response selection is a major functionality in a fully automated chatbot, which 
 Please download the training required data 
 1. [udc.zip](https://drive.google.com/file/d/1Za2av8jFydFhkAWBiCiZenIR6unrlSDF/view)
 2. [BERT.zip](https://drive.google.com/file/d/1k-QcbdiGouJ9dX0mrr11dTbBmNYSxDXs/view?usp=sharing)
+
 and unzip them to `data/`
 
 ## Train a model
