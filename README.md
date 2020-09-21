@@ -21,5 +21,3 @@ and unzip them to `data/`
 ## Train a model
 
 Run the run.sh to start train a new model, all the parameters can be adjusted in run.sh
-
-### Evaluate a trained model
