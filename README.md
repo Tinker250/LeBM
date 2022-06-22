@@ -1,13 +1,13 @@
-# LeBM
+# SAM
 
 ## Paper information
 Rongjunchen Zhang, Tingmin Wu, Sheng Wen, Surya Nepal, Cecile Paris, Yang Xiang
 
-[Left Brain Matching: A Logical Support Network for Multi-Turn Response Selection](https:).
+[SAM: Multi-Turn Response Selection Based on Semantic Awareness Matching](https:).
 
 ## Abstract
 
-Response selection is a major functionality in a fully automated chatbot, which attracted more and more attention in the filed of natural language processing and machining learning. Existing works concatenate on matching response with highly abstract context vector, which may lead to a logical mismatch when the response and the context have high similarity (e.g., the same word appears in both response and context). In this paper, we propose Left Brain Marching (LeBM), a logical support matching network can select response based on both similarity and logic level.  We evaluate LeBM with both Ubuntu Dialog corpus V1 and V2. The results show the accuracy of our proposed model substantially outperforms the state-of-the-art by 11.4% on Ubuntu Dialog corpus V2.
+Multi-turn response selection is a key issue in retrieval-based chatbots and has attracted considerable attention in the NLP (Natural Language processing) field. So far, researchers have developed many solutions that can select appropriate responses for multi-turn conversations. However, these works are still suffering from the semantic mismatch problem when responses and context share similar words with different meanings. In this paper, we propose a novel chatbot model based on Semantic Awareness Matching, called SAM. SAM can capture both similarity and semantic features in the context by a two-layer matching network. Appropriate responses are selected according to the matching probability made through the aggregation of the two feature types. In the evaluation, we pick four widely-used datasets and compare SAM's performance to that of twelve other models. Experiment results show that SAM achieves substantial improvements, with up to 1.5% R10@1 on Ubuntu Dialogue Corpus V2, 0.5% R10@1 on Douban Conversation Corpus, and 1.3% R10@1 on E-commerce Corpus.
 
 ## Citation
 
@@ -20,4 +20,4 @@ and unzip them to `data/`
 
 ## Train a model
 
-Run the run.sh to start train a new model, all the parameters can be adjusted in run.sh
+New trained model will be uploaded soon (before 30 July 2022)
