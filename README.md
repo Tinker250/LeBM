@@ -14,8 +14,8 @@ Multi-turn response selection is a key issue in retrieval-based chatbots and has
 ## Download the data
 Please download the training required data 
 1. [udc.zip](https://drive.google.com/file/d/1asyFD8BZvVAwDbFgIttwjwxhcbGcKmHJ/view?usp=sharing)
-2. [BERT_embeddings_original.zip](https://drive.google.com/file/d/1k-QcbdiGouJ9dX0mrr11dTbBmNYSxDXs/view?usp=sharing)
-2. [BERT_embeddings_adpted.zip](https://drive.google.com/file/d/1k-QcbdiGouJ9dX0mrr11dTbBmNYSxDXs/view?usp=sharing)
+2. [BERT_embeddings_original.zip](https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip)
+2. [BERT_embeddings_adpted.zip](https://drive.google.com/file/d/1M8V018XZbVDo4Xq96pCLFRt6yVzoKtjH/view)
 
 and unzip them to `data/`
 
