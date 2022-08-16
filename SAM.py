@@ -17,7 +17,7 @@ from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
 
 # gpus = tf.config.experimental.list_physical_devices('GPU')
-# tf.config.experimental.set_memory_growth(gpus[0], True)
+# tf.config.experimental.set_memory_growth(gpus[1], True)
 # tf.config.experimental.set_virtual_device_configuration(
 #         gpus[0],
 #         [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=7000)])
@@ -245,14 +245,14 @@ class UDCProcessor(DataProcessor):
     def get_dev_examples(self, data_dir): 
         """See base class."""
         examples = []
-        lines = self._read_tsv(os.path.join(data_dir, "dev.txt"))
+        lines = self._read_tsv(os.path.join(data_dir, "valid_v2.txt"))
         examples = self._create_examples(lines, "dev")
         return examples
 
     def get_test_examples(self, data_dir): 
         """See base class."""
         examples = []
-        lines = self._read_tsv(os.path.join(data_dir, "test_case.txt"))
+        lines = self._read_tsv(os.path.join(data_dir, "test_v2.txt"))
         examples = self._create_examples(lines, "test")
         return examples
 
@@ -650,7 +650,7 @@ def normalization_tokens(tokens_a,tokens_b,max_length):
 
 
 def create_model(bert_config, is_training, input_ids, input_mask, segment_ids,
-                 labels, num_labels, use_one_hot_embeddings):
+                 labels, num_labels, use_one_hot_embeddings,batch_size):
   """Creates a classification model."""
   model = modeling.BertModel(
       config=bert_config,
@@ -671,21 +671,21 @@ def create_model(bert_config, is_training, input_ids, input_mask, segment_ids,
   output_layer_1 = tf.nn.dropout(output_layer_1, keep_prob=0.9)
   output_layer_2 = tf.nn.dropout(output_layer_2, keep_prob=0.9)
 
-  dense_layer_1 = tf.keras.layers.Dense(15)
+  dense_layer_1 = tf.keras.layers.Dense(2)
   dense_output_1 = dense_layer_1(output_layer_1)
   print("*******************output_layer shape********************")
   print(dense_output_1.shape)
   print(output_layer_2.shape)
-  convlution_layer_1 = tf.compat.v1.keras.layers.Conv1D(400,11,activation='relu',strides=2)
+  convlution_layer_1 = tf.compat.v1.keras.layers.Conv1D(100,11,activation='relu',strides=2)
   convlution_output_1 = convlution_layer_1(output_layer_2)
-  convlution_layer_2 = tf.compat.v1.keras.layers.Conv1D(300,11,activation='relu',strides=2)
+  convlution_layer_2 = tf.compat.v1.keras.layers.Conv1D(100,11,activation='relu',strides=2)
   convlution_output_2 = convlution_layer_2(convlution_output_1)
   pool_1 = tf.compat.v1.keras.layers.MaxPool1D(2,2,padding='valid')
   pool_1_output = pool_1(convlution_output_2)
   print(pool_1_output.shape)
-  convlution_layer_3 = tf.compat.v1.keras.layers.Conv1D(200,11,activation='relu',strides=2)
+  convlution_layer_3 = tf.compat.v1.keras.layers.Conv1D(50,11,activation='relu',strides=2)
   convlution_output_3 = convlution_layer_3(convlution_output_2)
-  convlution_layer_4 = tf.compat.v1.keras.layers.Conv1D(200,17,activation='relu',strides=1)
+  convlution_layer_4 = tf.compat.v1.keras.layers.Conv1D(50,17,activation='relu',strides=1)
   print(convlution_output_1.shape)
   print(convlution_output_2.shape)
   print(convlution_output_3.shape)
@@ -694,7 +694,7 @@ def create_model(bert_config, is_training, input_ids, input_mask, segment_ids,
   # convlution_layer_5 = tf.compat.v1.keras.layers.Conv1D(100,9,activation='relu',strides=1)
   # convlution_output_5 = convlution_layer_5(convlution_output_4)
   # print(convlution_output_5.shape)
-  convlution_output_4 = tf.reshape(convlution_output_4,[12,200])
+  convlution_output_4 = tf.reshape(convlution_output_4,[batch_size,50])
   
   # print(token_b_index.shape)
   # output_token_a = output_layer_2[:,:100,:]
@@ -707,13 +707,11 @@ def create_model(bert_config, is_training, input_ids, input_mask, segment_ids,
 
   # logic_output = tf.matmul(lstm_out_token_a,lstm_out_token_b)
 
-  dense_layer_2 = tf.keras.layers.Dense(15)
+  dense_layer_2 = tf.keras.layers.Dense(2)
   dense_output_2 = dense_layer_2(convlution_output_4)
 
   # final = tf.keras.layers.concatenate([dense_output_1,dense_output_2],-1)
   final =  dense_output_1+dense_output_2
-  final_layer = tf.keras.layers.Dense(2)
-  final = final_layer(final)
 
   with tf.variable_scope("loss"):
     # if is_training:
@@ -733,15 +731,15 @@ def create_model(bert_config, is_training, input_ids, input_mask, segment_ids,
     # f_label = tf.compat.v1.reshape(labels,[12,1])
     # print("*******log_probs layer shape********")
     # print(labels.shape)
-    # per_example_loss = tf.nn.sparse_softmax_cross_entropy_with_logits(labels=labels,logits=logits)
-    per_example_loss = -tf.reduce_sum(one_hot_labels * log_probs, axis=-1)
+    per_example_loss = tf.nn.sparse_softmax_cross_entropy_with_logits(labels=labels,logits=logits)
+    # per_example_loss = -tf.reduce_sum(one_hot_labels * log_probs, axis=-1)
     loss = tf.reduce_mean(per_example_loss)
     return (loss, per_example_loss, logits, probabilities,dense_output_1,dense_output_2)
 
 
 def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
                      num_train_steps, num_warmup_steps, use_tpu,
-                     use_one_hot_embeddings):
+                     use_one_hot_embeddings,batch_size):
   """Returns `model_fn` closure for TPUEstimator."""
 
   def model_fn(features, labels, mode, params):  # pylint: disable=unused-argument
@@ -766,7 +764,7 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
 
     (total_loss, per_example_loss, logits, probabilities,dense_output_1,dense_output_2) = create_model(
         bert_config, is_training, input_ids, input_mask, segment_ids, label_ids,
-        num_labels, use_one_hot_embeddings)
+        num_labels, use_one_hot_embeddings,batch_size)
 
     tvars = tf.trainable_variables()
     initialized_variable_names = {}
@@ -947,7 +945,9 @@ def main(_):
       num_train_steps=num_train_steps,
       num_warmup_steps=num_warmup_steps,
       use_tpu=FLAGS.use_tpu,
-      use_one_hot_embeddings=FLAGS.use_tpu)
+      use_one_hot_embeddings=FLAGS.use_tpu,
+      batch_size=FLAGS.train_batch_size
+      )
 
   # If TPU is not available, this will fall back to normal Estimator on CPU
   # or GPU.
@@ -962,7 +962,7 @@ def main(_):
         model_fn=model_fn,
         model_dir=FLAGS.output_dir,
         config=run_config,
-        params={"batch_size":12}
+        params={"batch_size":FLAGS.train_batch_size}
   )
 
   if FLAGS.do_train:
@@ -1090,7 +1090,7 @@ if __name__ == "__main__":
   flags.mark_flag_as_required("vocab_file")
   flags.mark_flag_as_required("bert_config_file")
   flags.mark_flag_as_required("output_dir")
-  os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+  os.environ["CUDA_VISIBLE_DEVICES"] = "1"
   config = tf.ConfigProto()
   config.gpu_options.allow_growth=True
   session = tf.InteractiveSession(config=config)
